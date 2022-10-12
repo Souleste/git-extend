@@ -1,0 +1,22 @@
+{
+    "name": "git-extend",
+    "main": "./lib/git-extend",
+    "version": "0.0.0",
+    "description": "Run git operations via context menus.",
+    "keywords": [
+        "git",
+        "git operations"
+    ],
+    "activationHooks": [
+        "core:loaded-shell-environment"
+    ],
+    "repository": "https://github.com/atom/git-extend",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "dependencies": {
+        "child_process": "^1.0.2",
+        "to-array": "^0.1.4"
+    }
+}

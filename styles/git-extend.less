@@ -1,0 +1,176 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "atom-ui/styles/variables/variables";
+@import "ui-variables";
+
+[hidden] {
+    display: none !important;
+}
+
+.btn .loading-spinner-tiny {
+    display: inline-block;
+    margin-bottom: -3px;
+    margin-left: 5px;
+}
+
+// modal
+.gitExtend-modal {
+    .select-list-header {
+        border: 1px solid @overlay-border-color;
+        border-bottom: none;
+        border-top-left-radius: @list-group-border-radius;
+        border-top-right-radius: @list-group-border-radius;
+    }
+    .select-list {
+        .list-group {
+            max-height: 312px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin: 0;
+            border-bottom-left-radius: @list-group-border-radius;
+            border-bottom-right-radius: @list-group-border-radius;
+
+            .list-group-item {
+                padding: 0;
+                .empty-message { padding: 10px }
+
+                &:not(.selected):hover {
+                    background: #343439;
+                }
+
+                &:first-child {
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+                &:last-child {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            [class^="col"] {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .input-select {
+        display: block;
+        width: 100%;
+    }
+
+    .row {
+        display: flex !important;
+        padding: 0 !important;
+
+        [class^="col"] { padding: 5px }
+
+        .col-1 { width: 8.333333333333334% }
+        .col-2 { width: 16.666666666666668% }
+        .col-3 { width: 25% }
+        .col-4 { width: 33.333333333333336% }
+        .col-5 { width: 41.66666666666667% }
+        .col-6 { width: 50% }
+        .col-7 { width: 58.333333333333336% }
+        .col-8 { width: 66.66666666666667% }
+        .col-9 { width: 75% }
+        .col-10 { width: 83.33333333333334% }
+        .col-11 { width: 91.66666666666667% }
+        .col-12 { width: 100% }
+    }
+}
+
+.gitExtend-branch-list {
+    &.list-group {
+        margin: 0;
+
+        li {
+            &.gitExtend-branch-list--item-divider {
+                background: #2b2b2f;
+                position: sticky;
+                top: 0;
+                z-index: 1;
+
+                &[data-type="remote"] {
+                    top: 43px;
+                }
+            }
+
+            &.list-group-item {
+                display: flex;
+
+                *:not(:last-child) {
+                    margin-right: 3px;
+                }
+
+                *:last-child {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            &:not(.list-group-item) {
+                font-weight: bold;
+                font-style: italic;
+
+                & ~ .list-group-item {
+                    padding: 0.75em 1em;
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+// stash commit modal
+.gitExtend-stashCommitModal--modal {
+    .gitExtend-stashCommitModal--options-wrapper {
+        padding: 10px;
+
+        .gitExtend-stashCommitModal--options--untracked-label {
+            margin-bottom: 0;
+
+            .gitExtend-stashCommitModal--options--untracked-input {
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+// stash details modal
+.gitExtend-stashDetailsModal--modal {
+    .gitExtend-stashDetailsModal--files-wrapper {
+        max-height: 300px;
+        overflow-y: auto;
+
+        .gitExtend-stashDetailsModal--files-list {
+            padding: 10px;
+        }
+    }
+}
+
+// merge modal
+.gitExtend-mergeModal--modal {
+    .gitExtend-mergeModal--merge-options-wrapper {
+        padding: 10px;
+
+        .gitExtend-mergeModal--merge-options-option {
+            margin-right: 4px;
+        }
+    }
+    .gitExtend-mergeModal--merge-option-label {
+        display: block;
+    }
+}
+
+// replace modal
+.gitExtend-checkoutModal--modal {
+    .gitExtend-checkoutModal--option-panel[data-option="index"] {
+        p { padding: 10px }
+    }
+}

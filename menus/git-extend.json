@@ -1,0 +1,38 @@
+{
+    "context-menu": {
+        "atom-text-editor": [
+            { "label": "Toggle git-extend", "command": "git-extend:toggle" }
+        ],
+        ".github-branch": [
+            {
+                "label": "Stash",
+                "submenu": [
+                    { "label": "Stash changes...", "command": "git-extend:toggle-stash-commit-modal" },
+                    { "label": "View Stashed changes", "command": "git-extend:toggle-stash-list-modal" }
+                ]
+            },
+            { "label": "Merge", "command": "git-extend:toggle-merge-modal" }
+        ],
+        ".tree-view .full-menu [is='tree-view-file']": [
+            {
+                "label": "Git",
+                "submenu" : [
+                    { "label": "Replace With...", "command": "git-extend:toggle-checkout-modal" }
+                ]
+            }
+        ]
+    },
+    "menu": [
+        {
+            "label": "Packages",
+            "submenu": [
+                {
+                    "label": "git-extend",
+                    "submenu": [
+                        { "label": "Toggle", "command": "git-extend:toggle" }
+                    ]
+                }
+            ]
+        }
+    ]
+}
