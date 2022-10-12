@@ -1,7 +1,7 @@
 {
     "name": "git-extend",
     "main": "./lib/git-extend",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Run git operations via context menus.",
     "keywords": [
         "git",
