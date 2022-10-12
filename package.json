@@ -10,7 +10,7 @@
     "activationHooks": [
         "core:loaded-shell-environment"
     ],
-    "repository": "https://github.com/atom/git-extend",
+    "repository": "https://github.com/Souleste/git-extend",
     "license": "MIT",
     "engines": {
         "atom": ">=1.0.0 <2.0.0"
